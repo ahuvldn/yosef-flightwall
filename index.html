@@ -160,6 +160,25 @@
     font-size: 0.85rem;
     margin: 2rem 0 1rem;
   }
+
+  .contributors { margin-top: 1rem; }
+  .contributor {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+  }
+  .contrib-amount {
+    float: right;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .contrib-msg {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+
 </style>
 </head>
 <body>
@@ -247,6 +266,35 @@ Bank: Wise US Inc
   <div class="section">
     <h2>Once we hit $175</h2>
     <p>I’ll order the FlightWall and get it to Yosef. We’ll put everyone’s names on a note with it.</p>
+  </div>
+
+
+  <div class="section">
+    <h2>Contributors</h2>
+    <p class="note">Thank you — these people have already chipped in.</p>
+    <div class="contributors">
+      <div class="contributor">
+        <strong>Ahuv</strong> <span class="contrib-amount">$40</span>
+        <div class="contrib-msg">Starting us off</div>
+      </div>
+      <div class="contributor">
+        <strong>Yehudis Fletcher</strong> <span class="contrib-amount">£10</span>
+      </div>
+      <div class="contributor">
+        <strong>Vicky Bhogal</strong> <span class="contrib-amount">£20</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Add yourself</h2>
+    <p>Want your name on the list? Drop it here (and a short message if you like).</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your name or nickname" required style="width:100%; padding:0.75rem; margin:0.5rem 0; border-radius:8px; border:none; background:#0f172a; color:#f1f5f9;">
+      <textarea name="message" placeholder="Short message (optional)" rows="3" style="width:100%; padding:0.75rem; margin:0.5rem 0; border-radius:8px; border:none; background:#0f172a; color:#f1f5f9; resize:vertical;"></textarea>
+      <button type="submit" class="btn" style="border:none; cursor:pointer;">Add me to the list</button>
+    </form>
+    <p class="note">I’ll add new names to the list above as they come in.</p>
   </div>
 
   <footer>
